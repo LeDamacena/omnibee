@@ -17,9 +17,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   githubSocial: string = "https://github.com/LeDamacena/omnibee";
-  githubAuthUri: string = `https://github.com/login/oauth/authorize?client_id=${
-    environment.client_id
-  }&scope=user:email`;
+  githubAuthUri: string = `https://github.com/login/oauth/authorize?client_id=${environment.client_id}&scope=repo:read`;
 
   ngOnInit() {
     this.route.queryParams.subscribe((param: any) => {

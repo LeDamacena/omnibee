@@ -45,6 +45,7 @@ describe("AuthService", () => {
     expect(localStorage.getItem("currentToken")).toBeNull();
   });
 
+
   it("should can access currentTokenValue", () => {
     const service: AuthenticationService = TestBed.get(AuthenticationService);
     expect(service.currentTokenValue).toBeTruthy();

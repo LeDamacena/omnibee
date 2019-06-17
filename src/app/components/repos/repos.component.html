@@ -5,26 +5,19 @@
   </div>
 
   <div>
-    <a class="header__button button" href="javascript:void(0)" (click)="logout()"
-      >SAIR</a
-    >
+    <a class="header__button button" href="javascript:void(0)" (click)="logout()">SAIR</a>
   </div>
 </header>
 
 <section class="repos">
   <ul class="repos-list">
-    <li class="repos-list__item">
-      <span class="repos__initial">N</span>
-      <p class="repos__name">nome do repositórios</p>
+    <li class="repos-list__item" *ngFor=" let repo of repositories; trackBy: isTrackBy;">
+      <span class="repos__initial">{{ repo.name | initial }}</span>
+      <p class="repos__name">{{ repo.name }}</p>
       <div class="repos-details">
-        <span class="repos-details__item"><b>17.405.43</b> forks</span>
-        <span class="repos-details__item"><b>17.405.43</b> stars</span>
-        <a
-          class="repos-details__button button"
-          href="javascript:void(0)"
-          (click)="logout()"
-          >acessar</a
-        >
+        <span class="repos-details__item"><b>{{ repo.forks_count }}</b> forks</span>
+        <span class="repos-details__item"><b>{{ repo.stargazers_count }}</b> stars</span>
+        <a class="repos-details__button button" href="{{ repo.html_url }}" target="_blank" >acessar</a>
       </div>
     </li>
   </ul>
