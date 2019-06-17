@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/b2bb4bff36874bf29b6a0961b3306fc8)](https://www.codacy.com/app/LeDamacena/omnibee?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=LeDamacena/omnibee&amp;utm_campaign=Badge_Grade)
+
 # Omnibees
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
