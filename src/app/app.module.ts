@@ -1,26 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppComponent } from './app.component';
-import { ListRepositoriesComponent } from './components/list-repositories/list-repositories.component';
-import { LoginComponent } from './components/login/login.component';
+import { AppComponent } from "./app.component";
+import { Router } from "./app.routes";
+import { ReposComponent } from "@components/repos/repos.component";
+import { LoginComponent } from "@components/login/login.component";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListRepositoriesComponent,
+    AppComponent, 
+    ReposComponent, 
     LoginComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    RouterModule.forRoot([
-      { path: 'login', component: LoginComponent },
-      { path: '', component: ListRepositoriesComponent },
-      { path: '**', redirectTo: '/' }
-    ])
+    Router
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
