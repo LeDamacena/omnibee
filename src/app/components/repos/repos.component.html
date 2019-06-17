@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header-headline">
+    <h1 class="title">Omnibees</h1>
+    <p class="subtitle">senior frontend test</p>
+  </div>
+
+  <div>
+    <a class="header__button button" href="javascript:void(0)" (click)="logout()">SAIR</a>
+  </div>
+</header>
+
+<section class="repos">
+  <ul class="repos-list">
+    <li class="repos-list__item" *ngFor=" let repo of repositories; trackBy: isTrackBy;">
+      <span class="repos__initial">{{ repo.name | initial }}</span>
+      <p class="repos__name">{{ repo.name }}</p>
+      <div class="repos-details">
+        <span class="repos-details__item"><b>{{ repo.forks_count }}</b> forks</span>
+        <span class="repos-details__item"><b>{{ repo.stargazers_count }}</b> stars</span>
+        <a class="repos-details__button button" href="{{ repo.html_url }}" target="_blank" >acessar</a>
+      </div>
+    </li>
+  </ul>
+</section>
