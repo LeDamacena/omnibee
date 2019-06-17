@@ -7,7 +7,7 @@ import { environment } from "@environments/environment";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"]
+  styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {
   constructor(
@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
     private authenticationService: AuthenticationService
   ) {}
 
+  githubSocial: string = "https://github.com/LeDamacena/omnibee";
   githubAuthUri: string = `https://github.com/login/oauth/authorize?client_id=${
     environment.client_id
   }&scope=user:email`;

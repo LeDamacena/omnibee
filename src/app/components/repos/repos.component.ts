@@ -6,7 +6,7 @@ import { AuthenticationService } from "@services/auth.service";
 @Component({
   selector: "app-repos",
   templateUrl: "./repos.component.html",
-  styleUrls: ["./repos.component.css"]
+  styleUrls: ["./repos.component.scss"]
 })
 export class ReposComponent implements OnInit {
   constructor(

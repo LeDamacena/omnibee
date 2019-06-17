@@ -21,11 +21,17 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/svg/*"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/sass"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -83,13 +89,19 @@
             "sourceMap": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/svg/*"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/sass"
+              ]
+            },
             "scripts": [],
-            "codeCoverage": true 
+            "codeCoverage": true
           }
         },
         "lint": {
@@ -118,6 +130,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "omnibees"
+    }
+  },
+  "defaultProject": "omnibees",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
