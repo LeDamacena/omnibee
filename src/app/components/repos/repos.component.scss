@@ -24,6 +24,11 @@
       text-align: center;
       padding: 15px 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      transition: border-bottom .4s ease;
+
+      &:hover {
+        border-bottom: 3px solid $primary-color;
+      }
     }
   }
 
