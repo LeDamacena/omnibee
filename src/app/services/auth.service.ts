@@ -25,7 +25,7 @@ export class AuthenticationService {
   getToken(code: string) {
     return this.http
       .post<any>(
-        `/api/login/oauth/access_token`,
+        `${environment.api_host}/login/oauth/access_token`,
         {
           code,
           client_id: environment.client_id,
