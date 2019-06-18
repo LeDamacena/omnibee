@@ -3,9 +3,9 @@ import {
   HttpClientTestingModule,
   HttpTestingController
 } from "@angular/common/http/testing";
-import { of } from "rxjs";
 
 import { AuthenticationService } from "@services/auth.service";
+import { environment } from '@environments/*';
 
 describe("AuthService", () => {
   beforeEach(() =>
@@ -28,7 +28,8 @@ describe("AuthService", () => {
     });
 
     const req = httpMock.expectOne(
-      `/api/login/oauth/access_token`
+      
+      `${environment.api_host}/login/oauth/access_token`
     );
     expect(req.request.method).toBe("POST");
 
