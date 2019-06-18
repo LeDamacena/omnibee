@@ -4,10 +4,6 @@ const app = express();
 
 app.use(express.static(__dirname + "/dist/omnibees"));
 
-app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/omnibees/index.html"));
-});
-
 const port = process.env.PORT || 8000;
 
 app.listen(port, () => {
